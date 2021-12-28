@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cmo_cs:
+            client-id: cmo_cs
+            provider: provider_cmo_cs
+            client-secret: 7fd56c72-4ecb-4714-9eca-fe96e71193ac
+            authorization-grant-type: client_credentials
+          takbhuh0:
+            client-id: TAKBHUH0
+            provider: provider_smartpilot
+            client-secret: 2e18f5aa-ed9b-4fef-8f60-3d2fe19b235c
+            authorization-grant-type: client_credentials
+        provider:
+          provider_cmo_cs:
+            token-uri: http://localhost:9090/auth/realms/cmopg/protocol/openid-connect/token
+          provider_smartpilot:
+            token-uri: http://localhost:9090/auth/realms/smartpilot/protocol/openid-connect/token
