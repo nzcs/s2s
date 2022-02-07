@@ -3,7 +3,7 @@ server:
 
   ssl:
     enabled: false
-    key-store: classpath:cert/nt-gateway.jks
+    key-store: classpath:cert/client.jks
     key-store-password: nt-gateway
     key-alias: nt-gateway
     key-store-type: JKS
