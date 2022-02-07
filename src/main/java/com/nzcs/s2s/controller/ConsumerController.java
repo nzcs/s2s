@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ClientController {
+public class ConsumerController {
 
     @Autowired
-    private Server server;
+    private Producer producer;
 
 
     @GetMapping("/api/ping")
     public ResponseEntity<String> ping(@RequestHeader String client) {
-        return server.getHello(client);
+        return producer.getHello(client);
     }
 }

@@ -1,6 +1,15 @@
 server:
   port: 8081
 
+  ssl:
+    enabled: false
+    key-store: classpath:cert/nt-gateway.jks
+    key-store-password: nt-gateway
+    key-alias: nt-gateway
+    key-store-type: JKS
+    key-store-provider: SUN
+
+
 spring:
   security:
     oauth2:
@@ -21,3 +30,6 @@ spring:
             token-uri: http://localhost:9090/auth/realms/cmopg/protocol/openid-connect/token
           provider_smartpilot:
             token-uri: http://localhost:9090/auth/realms/smartpilot/protocol/openid-connect/token
+logging:
+  level:
+    root: debug
